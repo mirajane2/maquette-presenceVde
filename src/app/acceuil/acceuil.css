@@ -1,3 +1,4 @@
+
 .background {
     margin: 0;       
     padding: 0;      
@@ -14,7 +15,7 @@
 .cercle {
     width: 700px;
     height: 650px;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     padding: 30px;
     display: flex;
@@ -22,47 +23,43 @@
     align-items: center;
 }
 
+.choix-container {
+    width: 100%;
+}
+
+.choix {
+    display: flex;
+    flex-direction: column;
+}
+
+
 .logo {
     width: 134px;
     height: auto;
     mix-blend-mode: darken;
-}
-
-
-.choix-container {
-    width: 80%;
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-}
-
-.choix {
-
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    text-align: center;
-}
-.choix p {
-    width: 20%;
+    margin: 20px;
 }
 
 .choix h3, .choix h4 {
-    margin: 0;
+    margin: 0; 
+    font-size: 20px; 
 }
 
-.choix span {
-    display: block;
-    margin-bottom: 15px;
-    font-size: 14px;
+.choix p{
+    height: 54px;
+    font-size: 15px;
+    margin: 30px 0 30px 0;
 }
+
 
 .consultant {
     color: #C94B91;
+    height: 54px;
 }
 
 .expert {
     color: #57E4EB;
+    height: 54px;
 }
 
 
@@ -79,3 +76,47 @@
 .button2 { background-color: #F19937; }
 .button3 { background-color: #57E4EB; margin-bottom: 20px; }
 .button4 { background-color: #6BB346; }
+
+@media (max-width: 1199px) {
+
+    .background {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .cercle {
+        width: 90vw;
+        height: auto;     
+        padding: 20px;
+        border-radius: 50%;  
+
+    .choix-container {
+        text-align: center;
+    }
+
+    .row {
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .choix {
+        text-align: center !important;
+        align-items: center;
+    }
+
+    .choix p {
+        margin: 15px 0;
+        height: auto;
+    }
+
+    .button1, .button2, .button3, .button4 {
+        width: 50%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .logo {
+        width: 100px;
+        margin-bottom: 20px;
+    }}
+}
