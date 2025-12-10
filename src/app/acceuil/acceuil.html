@@ -10,7 +10,7 @@
                             <span>en attente d'une mission</span>
                         </div>
                         <p>Tenez au courant le Village de l'emploi de votre disponibilité</p>
-                        <button class="button1 ms-auto" (click)="login()">Je me connecte</button>
+                        <button class="button1 ms-auto" (click)="login(UserRole.CONSULTANT)">Je me connecte</button>
                         <button class="button2 ms-auto" (click)="CreateConsultant()">Je m'inscris</button>
                     </div>
                 </div>
@@ -21,7 +21,7 @@
                             <span>en recrutement</span>
                         </div>
                         <p>Consulter la liste de présence des consultants</p>
-                        <button class="button3" (click)="login()">Je me connecte</button>
+                        <button class="button3" (click)="login(UserRole.EXPERT)">Je me connecte</button>
                         <button class="button4" (click)="CreateExperts()">Je m'inscris</button>
                     </div>
                 </div>

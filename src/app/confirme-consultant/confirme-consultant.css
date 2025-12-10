@@ -85,6 +85,7 @@
     background-clip: text;
     font-weight: bold;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .gradient:hover,

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserRole } from '../models/enum';
 
 @Component({
   selector: 'app-acceuil',
@@ -11,8 +12,13 @@ export class Acceuil {
 
   constructor(private router: Router){}
 
-  login(){
-    this.router.navigateByUrl('login')
+  UserRole = UserRole;
+
+  login(type: UserRole) {
+  this.router.navigate(
+    ['login'],
+    { queryParams: { role: type } }
+    );
   }
 
   CreateExperts(){
@@ -22,5 +28,6 @@ export class Acceuil {
   CreateConsultant(){
     this.router.navigateByUrl('create-consultant')
   }
+
 
 }

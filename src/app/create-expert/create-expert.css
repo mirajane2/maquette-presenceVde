@@ -45,6 +45,7 @@
     width: 278px;
     height: 110px ;
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15);
+    border: 2px solid #57C4EB
 }
 .form{
     margin: 20px 0px 5px 20px;
@@ -78,7 +79,7 @@
 }
 
 .gradient{
-    color: #C94B91;
+    color: #57C4EB;
     cursor: pointer;
     pointer-events: auto;
     background-clip: text;

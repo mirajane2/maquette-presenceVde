@@ -5,13 +5,13 @@
         <div class="container">
           <div class="row">
             <div class="col-md-6">
-              <div class="consultant p-3">
+              <div class="consultant p-3" (click)="switchRole(userRole.CONSULTANT)"   [ngClass]="{ 'selected': role === userRole.CONSULTANT }">
                 <h6>Consultant</h6>
                 <p>J'ai terminé ma formation et j'attends de partir en mission</p>
               </div>
             </div>
             <div class="col-md-6">
-              <div class="expert p-3">
+              <div class="expert p-3" (click)="switchRole(userRole.EXPERT)"   [ngClass]="{ 'selected': role === userRole.EXPERT }">
                 <h6>Expert en recrutement</h6>
                 <p>Je mets en relation les consultants avec les clients</p>
               </div>
@@ -28,8 +28,8 @@
             <input type="password" id="password" name="password" placeholder="Mot de passe" >
           </div>
           <div class="log">
-            <button class="login" (click)="login()">Je me connecte</button>
-            <p>Pas encore de compte? <a [routerLink]="['/create-expert']" class="gradient">Je m'inscris</a></p>
+            <button class="login">Je me connecte</button>
+            <p>Pas encore de compte? <a [routerLink]= "signupLink" class="gradient">Je m'inscris</a></p>
           </div>
         </div>
   </div>
