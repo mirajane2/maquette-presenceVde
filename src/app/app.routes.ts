@@ -5,6 +5,7 @@ import { CreateExpert } from './create-expert/create-expert';
 import { ConfirmeExpert } from './confirme-expert/confirme-expert';
 import { CreateConsultant } from './create-consultant/create-consultant';
 import { ConfirmeConsultant } from './confirme-consultant/confirme-consultant';
+import { Presences } from './presences/presences';
 
 export const routes: Routes = [
     {path : '', component : Acceuil},
@@ -12,5 +13,6 @@ export const routes: Routes = [
     {path : 'create-expert', component : CreateExpert},
     {path : 'create-consultant', component : CreateConsultant},
     {path : 'confirme-expert', component : ConfirmeExpert},
-    {path : 'confirme-consultant', component : ConfirmeConsultant}
+    {path : 'confirme-consultant', component : ConfirmeConsultant},
+    {path : 'presences', component : Presences}
 ];
