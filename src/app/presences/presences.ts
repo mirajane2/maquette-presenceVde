@@ -6,12 +6,6 @@ import interactionPlugin from '@fullcalendar/interaction';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import frLocale from '@fullcalendar/core/locales/fr';
 
-interface CalendarEvent {
-  id: string;
-  title: string;
-  date: string;
-  type: 'present' | 'absent' | 'late' | 'generic';
-}
 
 @Component({
   selector: 'app-presences',
@@ -102,6 +96,7 @@ export class Presences {
   }
 
   refreshCalendar() {
+    //lors des refresh du calendar apres ajout evenements l'evenement doit prendre tout la case avec les donne visible (ex : present et heure)
     this.calendarOptions = {
       ...this.calendarOptions,
       events: this.events
@@ -128,6 +123,7 @@ export class Presences {
   }
 
   openCreateDialog() {
+    //essaye plutot de creer un formulaire pour ajouter les evenements
     const title = prompt('Titre de l’événement :');
     if (!title) return;
 
@@ -137,6 +133,7 @@ export class Presences {
     const type = prompt('Type (present / absent / late / generic) :', 'present') as any;
 
     this.addEvent(title, date, type);
+
   }
 
   onDateClick(info: any) {
@@ -149,6 +146,7 @@ export class Presences {
      🎯 SUPPRESSION
      ============================================================ */
   onEventClick(info: any) {
+    //cet evenement serra inclus dans le formulaire sur un bouton pour delete l'evenement
     const eventId = info.event.id;
     if (confirm('Supprimer cet événement ?')) {
       this.events = this.events.filter(e => e.id !== eventId);
